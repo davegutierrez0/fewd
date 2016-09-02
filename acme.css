@@ -1,0 +1,61 @@
+/* ACME Corp Assignment 1 CSS Sheet */
+
+body{
+  background:url(images/assignment1_images/background.png);
+  font-family:"Lucida Grande";
+  margin:auto;
+  width:100%;
+}
+
+
+header{
+  background-color:#c4c4c4;
+}
+
+img{
+  float:left;
+height:90px;
+}
+
+nav{
+  padding:10px;
+}
+
+ul{
+  text-align:right;
+}
+
+li{
+  display:inline;
+  font-size: 16px;
+  padding:10px;
+  font-weight: bold;
+  color:white;
+  text-shadow:1px 1px gray;
+}
+
+button{
+  background-color:#2A4CB2;
+  color:white;
+ font-weight:bold;
+ padding:10px;
+ font-size: 16px;
+ border-radius: 8px;
+ border-color:#2A4CB2;
+ border-style: outset;
+}
+
+main{
+  margin: 50px auto 50px auto;
+  width: 80%;
+  padding:35px;
+  background-color:white;
+  border-style:outset;
+  border-radius:12px;
+}
+
+footer {
+  text-align:center;
+  margin: 50px auto 50px auto;
+  color:rgb(162,161,163)
+}
