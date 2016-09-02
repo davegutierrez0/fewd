@@ -46,16 +46,32 @@ button{
 }
 
 main{
-  margin: 50px auto 50px auto;
+  margin: 30px auto 30px auto;
   width: 80%;
   padding:35px;
   background-color:white;
-  border-style:outset;
   border-radius:12px;
+  box-shadow: 3px 3px 5px rgba(194,194,194,0.4);
 }
 
+hr{
+  width:85%;
+  border:0;
+  height:0;
+  border-top:1px inset rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+  hr.header{
+  width: 100%;
+  border:0;
+  height:0;
+  border-top:1px solid rgba(140,140,140,0.5);
+  border-bottom: 1px solid rgba(140,140,140,0.5);
+  
+}
 footer {
   text-align:center;
-  margin: 50px auto 50px auto;
+  font-size:12px;
+  margin: 30px auto 30px auto;
   color:rgb(162,161,163)
 }
