@@ -8,6 +8,7 @@ a{
 }
 body{
   background:url(../img/background.png);
+  background-size:200px 200px;
   font-family:"Lucida Grande";
   margin:auto;
   width:100%;

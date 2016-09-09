@@ -10,9 +10,19 @@
     <style media="screen">
       .product-info{
         display:inline-block;
+        margin:20px 0px;
       }
-      .description{
-        text-align:right;
+      p.description{
+        text-align:left;
+        margin-top:20px;
+        box:2;
+      }
+      .product-info-img{
+        max-width:200px;
+        display:inline;
+        float:left;
+        box:1;
+      }
       }
     </style>
     </head>
@@ -41,28 +51,29 @@
         <p>For a complete list of products, please visit the Original Illustrated Catalog of ACME Products.</p>
 
       	<div class="product-info">
-          <p class="description">
-
           <img class="product-info-img" src="img/toy-windup-car.jpg" alt="ACME Toy Windup Car" />
+
+          <p class="description">
             Buy the little one in your life a toy they will love to play with, an ACME Toy Windup Car (Moving Co.).
-              <button type="button" name="Add to Cart">Add to Cart</button>
+          </p><button type="button" name="Add to Cart">Add to Cart</button>
               <a class="details-link" href="">Details</a>
-        </p>
         </div>
 <hr>
         <div class="product-info">
+          <img class="product-info-img" src="img/leg-muscle-vitamins.jpg" alt="ACME Triple-Strength Fortified Leg Muscle Vitamins"  />
           <p class="description">
-
-          <img class="product-info-img" src="img/leg-muscle-vitamins.jpg" alt="ACME Triple-Strength Fortified Leg Muscle Vitamins"  />ACME Triple Strength Fortified Leg Muscle Vitamins can give you shapely leg muscles in no time, available in several different sizes, including Family Size.
+            ACME Triple Strength Fortified Leg Muscle Vitamins can give you shapely leg muscles in no time, available in several different sizes, including Family Size.
+              </p>
           <button type="button" name="Add to Cart">Add to Cart</button>
-          <a class="details-link" href="">Details</a>
-          </p>
+            <a class="details-link" href="">Details</a>
+
         </div>
 <hr>
         <div class="product-info">
           <img class="product-info-img" src="img/ultimatum-dispenser.jpg" alt="ACME Ultimatum Dispenser" />
-          Use the ACME Ultimatum Dispatcher when you have to alert your enemies in a hurry.
-          <button type="button" name="Add to Cart">Add to Cart</button>
+          <p>
+            Use the ACME Ultimatum Dispatcher when you have to alert your enemies in a hurry.
+        </p><button type="button" name="Add to Cart">Add to Cart</button>
           <a class="details-link" href="">Details</a>
         </div>
       </main>
@@ -70,6 +81,5 @@
       <footer>
         Copyright, 2015
       </footer>
-  <!-- <script src="acme.js"></script> -->
   </body>
 </html>
