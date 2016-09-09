@@ -1,7 +1,9 @@
 /* ACME Corp Assignment 1 CSS Sheet */
-
+*{
+  box-sizing:border-box;
+}
 body{
-  background:url(images/assignment1_images/background.png);
+  background:url(../img/background.png);
   font-family:"Lucida Grande";
   margin:auto;
   width:100%;
@@ -12,9 +14,10 @@ header{
   background-color:#c4c4c4;
 }
 
-img{
+img.logo{
   float:left;
-height:90px;
+  width:25%;
+  padding:20px;
 }
 
 nav{
@@ -37,16 +40,16 @@ li{
 button{
   background-color:#2A4CB2;
   color:white;
- font-weight:bold;
- padding:10px;
- font-size: 16px;
- border-radius: 8px;
- border-color:#2A4CB2;
- border-style: outset;
+  font-weight:bold;
+  padding:10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border-color:#2A4CB2;
+  border-style: outset;
 }
 
 main{
-  margin: 30px auto 30px auto;
+  margin: 55px auto;
   width: 80%;
   padding:35px;
   background-color:white;
@@ -67,6 +70,21 @@ hr{
   height:0;
   border-top:1px solid rgba(140,140,140,0.5);
   border-bottom: 1px solid rgba(140,140,140,0.5);
+}
+.product-info {
+  display:inline-block;
+  top-margin:40px;
+}
+.product-info-img{
+  margin:10px;
+  border: 1px solid gray;
+  box-shadow: inset 1px 1px 5px 5px rgb(230,230,230);
+  border-radius:5px;
+  padding: 5px;
+}
+
+.details-link{
+  color:blue;
   
 }
 footer {

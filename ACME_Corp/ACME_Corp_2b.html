@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ACME Corp</title>
+    <link rel="stylesheet" href="css/acme.css">
+    <link href="anvil_favicon.ico" rel="icon" type="image/x-icon" />
+    <style>
+
+    .form-row{
+      padding:5px 3px;
+      display:flex;
+    }
+    input:focus{
+      border:3px solid #2A4CB2;
+    }
+    legend{
+      text-transform:uppercase;
+      font-size:small;
+      color:gray;
+    }
+    fieldset{
+      border:0px white;
+    }
+    label{
+      display:inline;
+      width:35%;
+      margin-right:10px;
+    }
+    tr{
+      display:inline-block;
+    }
+    td{
+      width:250px;
+    }
+    </style>
+  </head>
+  <header>
+
+    <img class="logo" src="img/acme-corp.jpg">
+    <nav>
+      <ul>
+
+        <li>
+          <a>Products</a>
+        </li>
+
+        <li>
+          <button>Sign Up</button>
+        </li>
+      </ul>
+    </nav>
+
+    </header>
+
+  <main>
+    <h1>Sign Up</h1>
+    <form class="name" action="index.html" method="post">
+
+      <div class="form-row">
+            <label for="f-name">First Name</label>
+            <input type="text" name="first name" value="" id="f-name" placeholder="John">
+      </div>
+
+        <div class="form-row">
+          <label for="l-name">Last Name</label>
+          <input type="text" name="last name" value="" id="l-name" placeholder="Doe">
+        </div>
+
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input type="text" name="Email" value="" id="email" placeholder="john@me.com">
+      </div>
+
+      <div class="form-row">
+        <label for="password">Password</label>
+        <input type="text" name="password" value="" id="password" placeholder="secret">
+      </div>
+
+      <div class="form-row">
+          <label for="referral">How did you hear about us?</label>
+      </div>
+
+      <div class="form-row">
+          <select>
+            <option value=""></option>
+            <option value="friend">Friend</option>
+            <option value="search">Search</option>
+            <option value="Other">Other</option>
+          </select>
+      </div>
+
+      <div class="form-row">
+
+          <input type="checkbox" name="ToS" value="" id="ToS">
+          <label for="ToS">Agree to our terms of service</label>
+      </div>
+
+      <div class="form-row">
+        <button class="submit">Sign Up</button>
+      </div>
+      </form>
+
+  </main>
+  <footer>
+    <hr>
+    Copyright, 2015
+  </footer>
+</html>

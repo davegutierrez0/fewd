@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Forms</title>
+    <style>
+    .form-row{
+      padding:3px;
+    }
+    legend{
+      text-transform:uppercase;
+      font-size:small;
+      color:gray;
+    }
+    fieldset{
+      border:0px white;
+    }
+    label{
+      display:inline-block;
+      width:10%;
+    }
+    </style>
+  </head>
+  <body>
+    <form class="name" action="index.html" method="post">
+
+      <fieldset>
+        <legend>
+          Name
+        </legend>
+          <div class="form-row">
+
+            <label for="f-name">First</label>
+            <input type="text" name="first name" value="" id="f-name" placeholder="John">
+
+          </div>
+
+          <div class="form-row">
+            <label for="l-name">Last</label>
+            <input type="text" name="last name" value="" id="l-name" placeholder="Doe">
+          </div>
+        </fieldset>
+      </form>
+
+      <form class="email-password" action="index.html" method="post">
+
+        <fieldset>
+          <legend>
+            Account Info
+          </legend>
+          <div class="form-row">
+              <label for="email">Email</label>
+              <input type="text" name="Email" value="" id="email" placeholder="john@me.com">
+            </div>
+            <div class="form-row">
+              <label for="password">Password</label>
+              <input type="text" name="password" value="" id="password" placeholder="secret">
+            </div>
+          </fieldset>
+        </form>
+
+      <form class="gender" action="index.html" method="post">
+        <fieldset>
+          <legend>
+            Gender
+          </legend>
+          <input type="radio" name="gender" value="">
+          <label for="gender">Male</label>
+          <input type="radio" name="gender" value="">
+          <label for="gender">Female</label>
+
+        </fieldset>
+      </form>
+
+      <form class="submit" action="index.html" method="post">
+        <input type="button" name="Submit" value="Save">
+
+      </form>
+
+  </body>
+</html>
