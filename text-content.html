@@ -1,0 +1,40 @@
+<!-- Text_Content.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Text Content</title>
+  </head>
+  <body>
+    <p>
+      Hello, world!
+    </p>
+    <ul>
+      <li>Milk</li>
+    </ul>
+    <script type="text/javascript">
+      var p = document.querySelector("p");
+      console.log(p.textContent);
+      // Change p's textContent to "Goodbye!"
+      p.textContent = "Goodbye!"
+
+      // Add an item to a list
+      // 1. Create the element
+      // 2. Append the child to the parent
+        // a. Get the parent
+        // b.append child
+        var cookiesItem = document.createElement("li");
+        cookiesItem.textContent = "Cookies";
+        document.querySelector("ul").appendChild(cookiesItem);
+
+      // 1. Create the img element
+      // 2. Set the arc of the img to url
+      // 3. Append the img to the page
+
+      var pikachu = document.createElement("img");
+      pikachu.setAttribute("src", "https://s-media-cache-ak0.pinimg.com/564x/c4/5f/5f/c45f5f26c1a552a44fa8103dd96e54cd.jpg");
+      document.querySelector("body").appendChild(pikachu);
+    </script>
+  </body>
+</html>

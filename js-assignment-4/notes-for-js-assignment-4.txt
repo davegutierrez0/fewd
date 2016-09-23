@@ -1,0 +1,9 @@
+notes-for-js-assignment-4.txt
+
+document.querySelector()
+
+
+1. Grab the value of the input with class "a1" and set to var
+2. Parse value of .a1 as int set to var
+3. Same as #1 but for "b0"
+4. Same as #2 but for ".b0" (set to var)

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JS Exercises</title>
+    <link rel="stylesheet" href="styles.css" media="screen">
+  </head>
+  <body>
+    <h1>JS Exercises</h1>
+
+    <h2>Document Title</h2>
+
+    <label>
+      Document title:
+      <input type="text" value="" class="document-title">
+    </label>
+
+    <h2>Full Name</h2>
+
+    <label>
+      First name:
+      <input type="text" value="John" class="first-name">
+    </label>
+
+    <label>
+      Last name:
+      <input type="text" value="Smith" class="last-name">
+    </label>
+
+    <label>
+      Full name:
+      <input type="text" value="" class="full-name">
+    </label>
+
+    <h2>Times Table</h2>
+
+    <table class="times-table">
+      <tr>
+        <th>
+          x
+        </th>
+        <th>
+          <input type="text" value="1" class="a1">
+        </th>
+        <th>
+          <input type="text" value="2" class="a2">
+        </th>
+        <th>
+          <input type="text" value="3" class="a3">
+        </th>
+        <th>
+          <input type="text" value="4" class="a4">
+        </th>
+        <th>
+          <input type="text" value="5" class="a5">
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <input type="text" value="1" class="b0">
+        </th>
+        <th>
+          <input type="text" value="" class="b1">
+        </th>
+        <th>
+          <input type="text" value="" class="b2">
+        </th>
+        <th>
+          <input type="text" value="" class="b3">
+        </th>
+        <th>
+          <input type="text" value="" class="b4">
+        </th>
+        <th>
+          <input type="text" value="" class="b5">
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <input type="text" value="2" class="c0">
+        </th>
+        <th>
+          <input type="text" value="" class="c1">
+        </th>
+        <th>
+          <input type="text" value="" class="c2">
+        </th>
+        <th>
+          <input type="text" value="" class="c3">
+        </th>
+        <th>
+          <input type="text" value="" class="c4">
+        </th>
+        <th>
+          <input type="text" value="" class="c5">
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <input type="text" value="3" class="d0">
+        </th>
+        <th>
+          <input type="text" value="" class="d1">
+        </th>
+        <th>
+          <input type="text" value="" class="d2">
+        </th>
+        <th>
+          <input type="text" value="" class="d3">
+        </th>
+        <th>
+          <input type="text" value="" class="d4">
+        </th>
+        <th>
+          <input type="text" value="" class="d5">
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <input type="text" value="4" class="e0">
+        </th>
+        <th>
+          <input type="text" value="" class="e1">
+        </th>
+        <th>
+          <input type="text" value="" class="e2">
+        </th>
+        <th>
+          <input type="text" value="" class="e3">
+        </th>
+        <th>
+          <input type="text" value="" class="e4">
+        </th>
+        <th>
+          <input type="text" value="" class="e5">
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <input type="text" value="5" class="f0">
+        </th>
+        <th>
+          <input type="text" value="" class="f1">
+        </th>
+        <th>
+          <input type="text" value="" class="f2">
+        </th>
+        <th>
+          <input type="text" value="" class="f3">
+        </th>
+        <th>
+          <input type="text" value="" class="f4">
+        </th>
+        <th>
+          <input type="text" value="" class="f5">
+        </th>
+      </tr>
+    </table>
+
+    <script>
+    // Your code goes here!
+    document.title = document.querySelector(".document-title").value;
+
+    var firstName = document.querySelector(".first-name").value;
+    var lastName = document.querySelector(".last-name").value;
+    var fullName = firstName + " " + lastName;
+    document.querySelector(".full-name").value = fullName;
+
+// 1x1 complete
+    var a1 = parseInt(document.querySelector(".a1").value);
+    var b0 = parseInt(document.querySelector(".b0").value);
+    var p = a1 * b0;
+    document.querySelector(".b1").value = p;
+// 2x1 complete
+    var a2 = parseInt(document.querySelector(".a2").value);
+    var b0 = parseInt(document.querySelector(".b0").value);
+    var p = a2 * b0;
+    document.querySelector(".b2").value = p;
+
+// 3x1 complete
+
+    var a3 = parseInt(document.querySelector(".a3").value);
+    var b0 = parseInt(document.querySelector(".b0").value);
+    var p = a3 * b0;
+    document.querySelector(".b3").value = p;
+
+    // 4x1
+
+    var a4 = parseInt(document.querySelector(".a4").value);
+    var b0 = parseInt(document.querySelector(".b0").value);
+    var p = a4 * b0;
+    document.querySelector(".b4").value = p;
+
+    // 5x1
+
+    var a5 = parseInt(document.querySelector(".a5").value);
+    var b0 = parseInt(document.querySelector(".b0").value);
+    var p = a5 * b0;
+    document.querySelector(".b5").value = p;
+
+    // 2x1
+
+    var a1 = parseInt(document.querySelector(".a1").value);
+    var c0 = parseInt(document.querySelector(".c0").value);
+    var p = a1 * c0;
+    document.querySelector(".c1").value = p;
+// 2x2
+    var a2 = parseInt(document.querySelector(".a2").value);
+    var c0 = parseInt(document.querySelector(".c0").value);
+    var p = a2 * c0;
+    document.querySelector(".c2").value = p;
+
+    var a3 = parseInt(document.querySelector(".a3").value);
+    var c0 = parseInt(document.querySelector(".c0").value);
+    var p = a3 * c0;
+    document.querySelector(".c3").value = p;
+
+    var a4 = parseInt(document.querySelector(".a4").value);
+    var c0 = parseInt(document.querySelector(".c0").value);
+    var p = a4 * c0;
+    document.querySelector(".c4").value = p;
+
+    var a5 = parseInt(document.querySelector(".a5").value);
+    var c0 = parseInt(document.querySelector(".c0").value);
+    var p = a5 * c0;
+    document.querySelector(".c5").value = p;
+
+// 3x1
+    var a1 = parseInt(document.querySelector(".a1").value);
+    var d0 = parseInt(document.querySelector(".d0").value);
+    var p = a1 * d0;
+    document.querySelector(".d1").value = p;
+
+    var a2 = parseInt(document.querySelector(".a2").value);
+    var d0 = parseInt(document.querySelector(".d0").value);
+    var p = a2 * d0;
+    document.querySelector(".d2").value = p;
+
+    var a3 = parseInt(document.querySelector(".a3").value);
+    var d0 = parseInt(document.querySelector(".d0").value);
+    var p = a3 * d0;
+    document.querySelector(".d3").value = p;
+
+    var a4 = parseInt(document.querySelector(".a4").value);
+    var d0 = parseInt(document.querySelector(".d0").value);
+    var p = a4 * d0;
+    document.querySelector(".d4").value = p;
+
+    var a5 = parseInt(document.querySelector(".a5").value);
+    var d0 = parseInt(document.querySelector(".d0").value);
+    var p = a5 * d0;
+    document.querySelector(".d5").value = p;
+
+// 4x1
+var a1 = parseInt(document.querySelector(".a1").value);
+var e0 = parseInt(document.querySelector(".e0").value);
+var p = a1 * e0;
+document.querySelector(".e1").value = p;
+
+var a2 = parseInt(document.querySelector(".a2").value);
+var e0 = parseInt(document.querySelector(".e0").value);
+var p = a2 * e0;
+document.querySelector(".e2").value = p;
+
+var a3 = parseInt(document.querySelector(".a3").value);
+var e0 = parseInt(document.querySelector(".e0").value);
+var p = a3 * e0;
+document.querySelector(".e3").value = p;
+
+var a4 = parseInt(document.querySelector(".a4").value);
+var e0 = parseInt(document.querySelector(".e0").value);
+var p = a4 * e0;
+document.querySelector(".e4").value = p;
+
+var a5 = parseInt(document.querySelector(".a5").value);
+var e0 = parseInt(document.querySelector(".e0").value);
+var p = a5 * e0;
+document.querySelector(".e5").value = p;
+
+// 5x1
+var a1 = parseInt(document.querySelector(".a1").value);
+var f0 = parseInt(document.querySelector(".f0").value);
+var p = a1 * f0;
+document.querySelector(".f1").value = p;
+
+var a2 = parseInt(document.querySelector(".a2").value);
+var f0 = parseInt(document.querySelector(".f0").value);
+var p = a2 * f0;
+document.querySelector(".f2").value = p;
+
+var a3 = parseInt(document.querySelector(".a3").value);
+var f0 = parseInt(document.querySelector(".f0").value);
+var p = a3 * f0;
+document.querySelector(".f3").value = p;
+
+var a4 = parseInt(document.querySelector(".a4").value);
+var f0 = parseInt(document.querySelector(".f0").value);
+var p = a4 * f0;
+document.querySelector(".f4").value = p;
+
+var a5 = parseInt(document.querySelector(".a5").value);
+var f0 = parseInt(document.querySelector(".f0").value);
+var p = a5 * f0;
+document.querySelector(".f5").value = p;
+
+    </script>
+  </body>
+</html>
