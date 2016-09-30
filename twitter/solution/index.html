@@ -85,30 +85,63 @@
 
       <script type="text/javascript">
 
-        var newTweet = document.createElement("li");
-        newTweet.classList.add("tweet");
-        var newTweetAvatar = document.createElement("div");
-        newTweetAvatar.classList.add("tweet-avatar");
-        newTweet.appendChild(newTweetAvatar)
 
-        var newTweetAvatarImg = document.createElement("img")
-        newTweetAvatarImg.setAttribute("src", "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg")
-        newTweetAvatarImg.setAttribute("alt", "Avatar")
-        newTweetAvatarImg.setAttribute("height", "64px")
-        newTweetAvatarImg.setAttribute("width", "64px")
-        newTweetAvatar.appendChild(newTweetAvatarImg)
+        var tweetButton = document.querySelector("input.button")
+        tweetButton.addEventListener("click", makeANewTweet);
 
-        var newTweetText = document.createElement("div");
-        newTweetText.classList.add("tweet-text");
-        // newTweetText.textContent = "textarea".textContent;
-        newTweet.appendChild(newTweetText);
-        newTweetText.textContent = "Test";
+        function makeANewTweet(event){
+          var textOfNewTweet = document.querySelector("textarea").value;
 
-        var newTweetAction = document.createElement("div");
-        newTweetAction.classList.add("tweet-actions");
-        newTweet.appendChild(newTweetAction)
+          event.preventDefault();
+          createTweet(textOfNewTweet);
+        // document.querySelector("form").reset();
+      document.querySelector("textarea").value = "";
+        }
 
-        document.querySelector(".tweets").appendChild(newTweet)
+
+        function createTweet(textOfNewTweet){
+
+          var newTweet = document.createElement("li");
+          newTweet.classList.add("tweet");
+          var newTweetAvatar = document.createElement("div");
+          newTweetAvatar.classList.add("tweet-avatar");
+          newTweet.appendChild(newTweetAvatar)
+
+          var newTweetAvatarImg = document.createElement("img")
+          newTweetAvatarImg.setAttribute("src", "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg")
+          newTweetAvatarImg.setAttribute("alt", "Avatar")
+          newTweetAvatarImg.setAttribute("height", "64px")
+          newTweetAvatarImg.setAttribute("width", "64px")
+          newTweetAvatar.appendChild(newTweetAvatarImg)
+
+          var newTweetText = document.createElement("div");
+          newTweetText.classList.add("tweet-text");
+          // newTweetText.textContent = "textarea".textContent;
+          newTweet.appendChild(newTweetText);
+          newTweetText.textContent = textOfNewTweet;
+
+          var newTweetAction = document.createElement("div");
+          newTweetAction.classList.add("tweet-actions");
+          newTweet.appendChild(newTweetAction)
+
+          document.querySelector(".tweets").appendChild(newTweet)
+        }
+
+
+        var textArea = document.querySelector("textarea");
+        textArea.addEventListener("keyup", countText);
+
+        function countText(event){
+          var numChars = textArea.value.length;
+          countChars(numChars);
+
+        }
+
+        function countChars(numChars){
+          var output = 140-numChars;
+          var charCounter = document.querySelector(".char-count");
+        charCounter.textContent = output;
+        }
       </script>
 
     </main>

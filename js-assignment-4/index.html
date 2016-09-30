@@ -167,142 +167,27 @@
     document.querySelector(".full-name").value = fullName;
 
 // 1x1 complete
-    var a1 = parseInt(document.querySelector(".a1").value);
-    var b0 = parseInt(document.querySelector(".b0").value);
-    var p = a1 * b0;
-    document.querySelector(".b1").value = p;
-// 2x1 complete
-    var a2 = parseInt(document.querySelector(".a2").value);
-    var b0 = parseInt(document.querySelector(".b0").value);
-    var p = a2 * b0;
-    document.querySelector(".b2").value = p;
 
-// 3x1 complete
+function multiTry(row,column,output) {
+  var a = parseInt(document.querySelector(row).value);
+  var b = parseInt(document.querySelector(column).value);
+  var c = a * b;
+  document.querySelector(output).value = c;
+}
 
-    var a3 = parseInt(document.querySelector(".a3").value);
-    var b0 = parseInt(document.querySelector(".b0").value);
-    var p = a3 * b0;
-    document.querySelector(".b3").value = p;
+function multiMultiTry(letter) {
+multiTry("."+letter+"0",".a1","."+letter+"1");
+multiTry("."+letter+"0",".a2","."+letter+"2");
+multiTry("."+letter+"0",".a3","."+letter+"3");
+multiTry("."+letter+"0",".a4","."+letter+"4");
+multiTry("."+letter+"0",".a5","."+letter+"5");
+}
 
-    // 4x1
-
-    var a4 = parseInt(document.querySelector(".a4").value);
-    var b0 = parseInt(document.querySelector(".b0").value);
-    var p = a4 * b0;
-    document.querySelector(".b4").value = p;
-
-    // 5x1
-
-    var a5 = parseInt(document.querySelector(".a5").value);
-    var b0 = parseInt(document.querySelector(".b0").value);
-    var p = a5 * b0;
-    document.querySelector(".b5").value = p;
-
-    // 2x1
-
-    var a1 = parseInt(document.querySelector(".a1").value);
-    var c0 = parseInt(document.querySelector(".c0").value);
-    var p = a1 * c0;
-    document.querySelector(".c1").value = p;
-// 2x2
-    var a2 = parseInt(document.querySelector(".a2").value);
-    var c0 = parseInt(document.querySelector(".c0").value);
-    var p = a2 * c0;
-    document.querySelector(".c2").value = p;
-
-    var a3 = parseInt(document.querySelector(".a3").value);
-    var c0 = parseInt(document.querySelector(".c0").value);
-    var p = a3 * c0;
-    document.querySelector(".c3").value = p;
-
-    var a4 = parseInt(document.querySelector(".a4").value);
-    var c0 = parseInt(document.querySelector(".c0").value);
-    var p = a4 * c0;
-    document.querySelector(".c4").value = p;
-
-    var a5 = parseInt(document.querySelector(".a5").value);
-    var c0 = parseInt(document.querySelector(".c0").value);
-    var p = a5 * c0;
-    document.querySelector(".c5").value = p;
-
-// 3x1
-    var a1 = parseInt(document.querySelector(".a1").value);
-    var d0 = parseInt(document.querySelector(".d0").value);
-    var p = a1 * d0;
-    document.querySelector(".d1").value = p;
-
-    var a2 = parseInt(document.querySelector(".a2").value);
-    var d0 = parseInt(document.querySelector(".d0").value);
-    var p = a2 * d0;
-    document.querySelector(".d2").value = p;
-
-    var a3 = parseInt(document.querySelector(".a3").value);
-    var d0 = parseInt(document.querySelector(".d0").value);
-    var p = a3 * d0;
-    document.querySelector(".d3").value = p;
-
-    var a4 = parseInt(document.querySelector(".a4").value);
-    var d0 = parseInt(document.querySelector(".d0").value);
-    var p = a4 * d0;
-    document.querySelector(".d4").value = p;
-
-    var a5 = parseInt(document.querySelector(".a5").value);
-    var d0 = parseInt(document.querySelector(".d0").value);
-    var p = a5 * d0;
-    document.querySelector(".d5").value = p;
-
-// 4x1
-var a1 = parseInt(document.querySelector(".a1").value);
-var e0 = parseInt(document.querySelector(".e0").value);
-var p = a1 * e0;
-document.querySelector(".e1").value = p;
-
-var a2 = parseInt(document.querySelector(".a2").value);
-var e0 = parseInt(document.querySelector(".e0").value);
-var p = a2 * e0;
-document.querySelector(".e2").value = p;
-
-var a3 = parseInt(document.querySelector(".a3").value);
-var e0 = parseInt(document.querySelector(".e0").value);
-var p = a3 * e0;
-document.querySelector(".e3").value = p;
-
-var a4 = parseInt(document.querySelector(".a4").value);
-var e0 = parseInt(document.querySelector(".e0").value);
-var p = a4 * e0;
-document.querySelector(".e4").value = p;
-
-var a5 = parseInt(document.querySelector(".a5").value);
-var e0 = parseInt(document.querySelector(".e0").value);
-var p = a5 * e0;
-document.querySelector(".e5").value = p;
-
-// 5x1
-var a1 = parseInt(document.querySelector(".a1").value);
-var f0 = parseInt(document.querySelector(".f0").value);
-var p = a1 * f0;
-document.querySelector(".f1").value = p;
-
-var a2 = parseInt(document.querySelector(".a2").value);
-var f0 = parseInt(document.querySelector(".f0").value);
-var p = a2 * f0;
-document.querySelector(".f2").value = p;
-
-var a3 = parseInt(document.querySelector(".a3").value);
-var f0 = parseInt(document.querySelector(".f0").value);
-var p = a3 * f0;
-document.querySelector(".f3").value = p;
-
-var a4 = parseInt(document.querySelector(".a4").value);
-var f0 = parseInt(document.querySelector(".f0").value);
-var p = a4 * f0;
-document.querySelector(".f4").value = p;
-
-var a5 = parseInt(document.querySelector(".a5").value);
-var f0 = parseInt(document.querySelector(".f0").value);
-var p = a5 * f0;
-document.querySelector(".f5").value = p;
-
+multiMultiTry("b");
+multiMultiTry("c");
+multiMultiTry("d");
+multiMultiTry("e");
+multiMultiTry("f");
     </script>
   </body>
 </html>

@@ -1,0 +1,59 @@
+<style media="screen">
+  .comment {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 1em;
+    margin-bottom: 1em;
+
+  }
+  textarea{
+    width:100%;
+  }
+</style>
+
+
+<div id="container">
+  <div class="comment">
+    This is a comment!
+  </div>
+</div>
+
+<textarea placeholder="Comments go here. . ."></textarea>
+
+<button type="button" name="button">
+  Leave a comment (it's a surprise)
+</button>
+
+
+<script type="text/javascript">
+
+var button = document.querySelector("button")
+// this is an event handler (yes it's still just a function)
+
+function makeASurpriseComment(event){
+  // always call event.preventDefault()
+
+  event.preventDefault();
+
+  createComment("Surprise!")
+
+  console.log(event)
+}
+
+button.addEventListener("click", makeASurpriseComment);
+function createComment(commentContent){
+
+// creating the comment div
+var commentDiv = document.createElement("div");
+commentDiv.textContent = commentContent;
+
+// adding a class to the div of "comment"
+commentDiv.classList.add("comment");
+
+// appending the div to the container div, which has the ID "container"
+var parent = document.querySelector("#container");
+parent.appendChild(commentDiv);
+
+}
+
+</script>
