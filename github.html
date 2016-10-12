@@ -1,0 +1,58 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<form>
+  <input type="search" id="query" placeholder="GitHub username">
+  <input type="submit" value="Lookup">
+</form>
+
+<table>
+  <tr>
+    <th>Name:</th>
+    <td id="user-name"></td>
+  </tr>
+  <tr>
+    <th>Bio:</th>
+    <td id="user-bio"></td>
+  </tr>
+  <tr>
+    <th>Picture:</th>
+    <td id="user-picture"></td>
+  </tr>
+</table>
+
+<script>
+var user = document.querySelector("input").value;
+var form = document.querySelector("form");
+
+form.addEventListener("submit",searchAction);
+
+function searchAction(event){
+  event.preventDefault();
+
+  $.get("http://proxy.avandamiri.com/get?url=https://api.github.com/users/"+"user",handleResults);
+
+  function handleResults(user){
+    var name = user.login;
+    var bio = user.bio;
+    var pic = user.avatar_url
+    console.log(name, bio, pic)
+    document.querySelector("#user-name").textContent = name.value
+    document.querySelector("#user-bio").textContent = bio.value
+
+
+    // Vanilla
+     var img = document.createElement("img");
+     img.setAttribute("src", results.image);
+     document.querySelector("#user-picture").appendChild(img);
+
+     // Expanded jQuery
+     var img = $("<img>")
+     img.attr("src", results.image);
+     $("#user-picture").append(img);
+
+     // Condensed (chained) jQuery
+     $("<img>").attr("src", results.image).appendTo("#user-picture");
+  }
+
+}
+</script>

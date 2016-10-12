@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Happy Birthday</title>
+      <style media="screen">
+        .candle{
+          font-size:6em;
+          color:white;
+          padding: 5px;
+        }
+        body{
+          background:gray;
+        }
+      </style>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+      var age = parseInt(prompt("How many years old are you?"));
+      var body = document.querySelector("body");
+      for (var i = 0; i <= age; i++) {
+          var candle = document.createElement("span");
+          candle.textContent = "🕯";
+          candle.classList.add("candle");
+          body.appendChild(candle)
+          var message = document.createElement("span");
+          message.textContent="Happy"+" "+age+"th"+" "+"Birthday!"
+          message.classList.add("candle");
+          body.appendChild(message)
+          var candle2 = document.createElement("span");
+          candle2.textContent = "🕯";
+          candle2.classList.add("candle");
+          body.appendChild(candle2)
+
+      }
+    </script>
+  </body>
+</html>
