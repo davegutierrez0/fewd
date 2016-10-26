@@ -1,0 +1,21 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JSON Unpacking</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      $.get("http://omdbapi.com/?s=terminator", function(results){
+        console.log(results.Search[0].Title)
+        console.log(results.Search[9].Title)
+        for (var i = 0; i < results.Search.length; i++) {
+          console.log(results.Search[i].Title)
+        }
+      });
+    </script>
+  </body>
+</html>

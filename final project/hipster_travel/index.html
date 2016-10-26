@@ -1,0 +1,115 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome to HipSchlep</title>
+    <style media="screen">
+      body{
+        max-width:660px;
+        background-color:white;
+      }
+      #container{
+        background:gray;
+        overflow:auto;
+        display:inline-block;
+
+      }
+      .gridBlock{
+        height:300px;
+        width:300px;
+        overflow:auto;
+        border-radius:2px;
+        margin: 15px;
+      }
+      .contentPage, .coverPage{
+        background:white;
+        height:429px;
+        width:330px;
+        text-align:center;
+        display:inline-block;
+
+      }
+
+  /*need to get css responsive block flowing*/
+  /*need to get the nav buttons wired up */
+  /*need to display:hide and display:show on demand using javscript*/
+  /*need to grab apis*/
+  /*need to style up using moleskine theme*/
+  /*need to animate if have the time*/
+  /*then done!*/
+
+    </style>
+  </head>
+  <body>
+    <!-- viewport measurements are...660px w x371.06px-->
+    <!--  moleskin ratio is 1.3 w to 1h open or 0.65w to 0.5h closed -->
+    <div id="container">
+      <div id="leftNav" class="button"></div>
+      <div id="rightNav" class="button"></div>
+
+    <!--  front cover -->
+      <div class="coverPage">
+        <h1 class="title" >HipSchlep: Providing terrible travel advice since October 2016</h1>
+        <h2>Design by DmG</h2>
+        <img src="" alt="This is a placeholder for a cute orangutan" style="height:200px; width:200px; background:orange; overflow:auto;">
+        <form class="" action="index.html" method="post">
+          <input type="button" name="name" value="">Where do you want to go?</input>
+        </form>
+      </div>
+    <!-- first page -->
+
+      <div class="contentPage">
+        <h2>Weather</h2>
+        <div id="weather" class="gridBlock" style="background:green">
+          <p>
+            This is a weather grid placeholder.
+          </p>
+        </div>
+      </div>
+
+    <!-- second page -->
+
+        <div class="contentPage">
+          <h2>Local Music</h2>
+          <div id="songKick" class="gridBlock" style="background:blue">
+            <p>
+              This is a SongKick grid placeholder.
+            </p>
+          </div>
+        </div>
+
+        <!-- third page -->
+
+        <div class="contentPage">
+          <h2>HipFeed</h2>
+          <div id="instagram" class="gridBlock" style="background:red">
+            <p>
+              This is an instagram grid placeholder.
+            </p>
+          </div>
+        </div>
+
+        <!-- fourth page -->
+
+        <div class="contentPage">
+          <h2>What to Wear?</h2>
+          <div id="swackett" class="gridBlock" style="background:yellow">
+            <p>
+              This is a swackett grid placeholder.
+            </p>
+          </div>
+        </div>
+    <!-- back cover  -->
+
+      <div class="coverPage">
+        <footer>(C) Psicólab 2016</footer>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      // buttons = document.querySelectorAll(".button")
+    </script>
+  </body>
+</html>

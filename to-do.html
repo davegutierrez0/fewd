@@ -5,58 +5,85 @@
     <meta charset="utf-8">
     <title>Today's To-Dos</title>
     <style media="screen">
+
       body{
+        background:rgb(228,227,231);
         margin-left:10px;
         margin-right:10px;
-        width:90%;
+        width:100%;
+        position:relative;
 
+      }
+      .content{
+        position:absolute;
+        top:25%;
+        left:25%;
+        width:50%;
+        min-height:300px;
+        background:white;
+        margin-top:5em;
       }
       .header {
         display:inline-block;
       }
       #h1{
         text-align: left;
-        margin:10px;
-        float:left
+        padding:1em;
+        position:absolute;
+        left:5%;
+        top:5%;
       }
 
       .counter{
         text-align: right;
-        margin:10px;
-        float: right;
-        }
+        padding:1em;
+        position:absolute;
+        right:5%;
+        top:5%;
+          }
 
-      .inputs{
-        display:flex;
-        max-width:60%;
       }
+      .inputs{
+        position:absolute;
+        text-align:center;
+        left:15%;
+        top:30%;
+      }
+
+      }
+      .outputs{
+        position:relative;
+        left:22%;
+      }
+
     </style>
   </head>
   <body>
-    <div class="header">
-      <span id="h1">Today's Todos</span>
-      <span class="emptySpan"> </span>
-      <span class="counter"><span id="tdCount">0</span> todos</span>
-    </div>
+    <div class="content">
+      <div class="header">
+        <span id="h1">Today's Todos</span>
+        <span class="emptySpan"> </span>
+        <span class="counter"><span id="tdCount">0</span> todos</span>
+      </div>
 
-    <div class="inputs">
-      <form class="" action="index.html" method="post">
-        <textarea name="name" rows="1" cols="40" placeholder="What do you need to do today?"></textarea>
-        <button type="button" name="button">Create</button>
-      </form>
-    </div>
+      <div class="inputs">
+        <form class="" action="index.html" method="post">
+          <textarea name="name" rows="1" cols="40" placeholder="What do you need to do today?"></textarea>
+          <button type="button" name="button">Create</button>
+        </form>
+      </div>
 
-    <div class="outputs">
-      <ul>
-        <div class="liRow">
-          <label for="">
-            <input type="checkbox" name="name" value="">
-            <span>Test bubble</span>
-          </label>
-        </li>
-        </div>
-      </ul>
-
+      <div class="outputs">
+        <ul>
+          <div class="liRow">
+            <label for="">
+              <input type="checkbox" name="name" value="">
+              <span>Test bubble</span>
+            </label>
+          </li>
+          </div>
+        </ul>
+      </div>
     </div>
 
 <script type="text/javascript">
@@ -68,7 +95,7 @@ function addToDo(newToDoContent){
   newComment.classList.add("comment");
   newComment.appendChild(newToDoContent);
   document.querySelector("#comments").appendChild(newComment);
-
+  }
 </script>
   </body>
 </html>
