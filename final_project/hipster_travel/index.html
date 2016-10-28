@@ -4,112 +4,410 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Welcome to HipSchlep</title>
+    <link href="./design/favicon.ico" rel="icon" type="image/x-icon" />
+    <meta name="viewport" content="width = 1050, user-scalable = no" />
+    <title>HipsterTravel</title>
     <style media="screen">
-      body{
-        max-width:660px;
-        background-color:white;
-      }
+
+
+    body{
+      width:60em;
+      height:45em;
+    }
+
+    html{
+      width:100%;
+      overflow:hidden;
+    }
+
+    div{
+      overflow:hidden;
+      display:inline-block;
+      padding:0px 0px;
+    }
+
       #container{
-        background:gray;
-        overflow:auto;
-        display:inline-block;
-
+        width:85%;
+        height:85%;
+        background:url(./design/frontCover.png);
+        /*background:url(./design/frontInnerCover.png);*/
+        /*background:url(./design/middlePages.png);*/
+        /*background:url(./design/backCover.png);*/
+        background-size:contain;
+        background-position: 2em 1.5em, center;
+        background-repeat: no-repeat;
+        padding:1em;
+        /*border-radius: 10px;*/
+        margin-left:5em;
+        float:none;
+        padding-top:0px;
+        /*text-align:center;*/
       }
+
       .gridBlock{
-        height:300px;
-        width:300px;
-        overflow:auto;
-        border-radius:2px;
-        margin: 15px;
+        height:370px;
+        width:250px;
+        overflow:hidden;
+        /*border-radius:2px;*/
+        /*margin-: 15px;*/
       }
-      .contentPage, .coverPage{
-        background:white;
-        height:429px;
-        width:330px;
-        text-align:center;
-        display:inline-block;
 
+      .contentPage, .coverPage{
+        height:465px;
+        width:300px;
+        text-align:center;
+        /*display:inline-block;*/
+        position:relative;
+        margin-top:5em;
+
+      }
+
+      .coverPage{
+      margin-left:4.5em;
+      padding-right:0em;
+      margin-right:1em;
+    }
+
+      .contentPage{
+        margin-left:3em;
+        margin-right:2.5em;
+      }
+
+      .navButton{
+        height:50px;
+        position: fixed;
+        top:10em;
+        padding:50px;
+        z-index:3;
+      }
+
+      #set1, #set2, #set3{
+        display:none;
+      }
+
+      h1{
+        font-size:1.5em;
+        margin-top:1em;
+        color:white;
+      }
+
+      h2{
+        font-size:1.5em;
+        margin-top:1em;
+      }
+
+      h1, h2{
+        font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+        font-weight:bold;
+        text-decoration:underline;
+      }
+      img{
+        margin-top:1em;
+      }
+
+      p, li, a, footer, label, select, option{
+        font-family:"Trebuchet MS", Helvetica, sans-serif;
+        font-size:0.75em;
+      }
+
+      li{
+        margin:1em 0em;
+        padding-left:0em;
+        text-align:left;
+        display:inline-block;
+        padding-right:0.25em;
+      }
+
+      .emoji{
+        text-decoration:unset;
+        font-size:0.75em;
+        text-align:center;
+        display:block;
+        padding:0em 0em;
+        margin: 0em 0em;
+      }
+
+      ol{
+        padding-left:0em;
+      }
+
+      footer{
+        position:relative;
+        bottom:-30%;
+      }
+      .coverContent{
+        color:white;
+        font-size:1em;
+      }
+
+
+      }
+
+            .select-style {
+          border: 1px solid #ccc;
+          width: 120px;
+          border-radius: 3px;
+          overflow: hidden;
+          background: #fafafa url("img/icon-select.png") no-repeat 90% 50%;
+      }
+
+      .select-style select {
+          padding: 5px 8px;
+          width: 60%;
+          border: none;
+          box-shadow: none;
+          background: white;
+          background-image: none;
+          -webkit-appearance: none;
+          display:block;
+          margin: 0 auto;
+      }
+
+      .select-style select:focus {
+          outline: none;
       }
 
   /*need to get css responsive block flowing*/
-  /*need to get the nav buttons wired up */
-  /*need to display:hide and display:show on demand using javscript*/
   /*need to grab apis*/
-  /*need to style up using moleskine theme*/
   /*need to animate if have the time*/
   /*then done!*/
 
+
+
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   </head>
   <body>
-    <!-- viewport measurements are...660px w x371.06px-->
     <!--  moleskin ratio is 1.3 w to 1h open or 0.65w to 0.5h closed -->
+    <span id="leftNav"  style="float:left"><img class="navButton" id="leftArrow" src="./design/left_arrow.png" alt="leftArrow"></span>
+    <span id="rightNav"  style="float:right; margin-right:4em;"><img id="rightArrow" class="navButton" src="./design/right_arrow.png" alt="rightArrow"></span>
+
     <div id="container">
-      <div id="leftNav" class="button"></div>
-      <div id="rightNav" class="button"></div>
 
-    <!--  front cover -->
-      <div class="coverPage">
-        <h1 class="title" >HipSchlep: Providing terrible travel advice since October 2016</h1>
-        <h2>Design by DmG</h2>
-        <img src="" alt="This is a placeholder for a cute orangutan" style="height:200px; width:200px; background:orange; overflow:auto;">
-        <form class="" action="index.html" method="post">
-          <input type="button" name="name" value="">Where do you want to go?</input>
-        </form>
+      <div id="set0" style="display:block">
+        <div class="coverPage" id="pg1"></div>
+        <div class="contentPage" id="pg2">
+          <hr>
+          <h1 class="title" >Welcome to HipsterTravel!</h1>
+          <p class="coverContent">Ironic travel advice since <span style="text-decoration:line-through">1816</span> 2016</p>
+          <img src="./design/worldMap.png" alt="" style="max-width:300px"/>
+          <div class="select-style">
+            <label class="coverContent">Where do you want to go?</label>
+          <select id="dropDown" class="dropdown-content">
+            <option id="blank" value=""></option>
+            <option class="MA" id="Boston" value="Boston">Boston, MA</option>
+            <option class="IL" id="Chicago" value="Chicago">Chicago, IL</option>
+            <option class="NY" id="New_York" value="New%20York">New York, NY</option>
+            <option class="CA" id="San_Francisco" value="San%20Francisco">San Francisco, CA</option>
+          </select>
+        </div>
+          <hr>
+        </div>
+    </div>
+
+      <div id="set1">
+      <div class="coverPage" id="pg3"><img src="./design/orangutan.png" alt="This is a placeholder for a cute orangutan" style="height:66%; width:66%; border-radius:10px; overflow:auto;filter:invert(0%)">
       </div>
-    <!-- first page -->
+      <div class="contentPage" id="pg4"><img src="./design/questionMark.png" style="width:150px; margin-top:12em;margin-right:3em;" alt="" />
+        <p id="wiki">
 
-      <div class="contentPage">
-        <h2>Weather</h2>
-        <div id="weather" class="gridBlock" style="background:green">
+      </p>
+    </div>
+    </div>
+
+      <div id="set2">
+      <div class="coverPage" id="pg4">
+        <h2>Bring on the Basics</h2>
+        <img src="./design/opener_sf.png" alt=""/ style="max-width:265px">
+        <div id="weather" class="gridBlock" >
           <p>
-            This is a weather grid placeholder.
+              Local time in <span id="cityName">San Francisco</span> is <span id="localTime"></span>.
+          </p>
+          <p>
+            The current temperature is <span id="currentTemp"></span>. Conditions are <span id="weatherCo"></span>.
           </p>
         </div>
       </div>
 
-    <!-- second page -->
-
-        <div class="contentPage">
-          <h2>Local Music</h2>
-          <div id="songKick" class="gridBlock" style="background:blue">
-            <p>
-              This is a SongKick grid placeholder.
-            </p>
-          </div>
+      <div class="contentPage" id="pg5">
+        <h2> Trending Local Tracks </h2>
+        <div id="lastFM" class="gridBlock">
+          <ol type="1.">
+            <li id="fm1"></li><a id="fm1i" href="">(Link)</a>
+            <span class="emoji">🎶</span>
+            <li id="fm2"></li><a id="fm2i" href="">(Link)</a>
+            <span class="emoji">🎶</span>
+            <li id="fm3"></li><a id="fm3i" href="">(Link)</a>
+            <span class="emoji">🎶</span>
+            <li id="fm4"></li><a id="fm4i" href="">(Link)</a>
+            <span class="emoji">🎶</span>
+            <li id="fm5"></li><a id="fm5i" href="">(Link)</a>
+          </ol>
+          <img src="./design/vinyl.png" alt="" style="height:66px; margin-top:0em; float:bottom" />
         </div>
+      </div>
+      </div>
 
-        <!-- third page -->
 
-        <div class="contentPage">
-          <h2>HipFeed</h2>
-          <div id="instagram" class="gridBlock" style="background:red">
-            <p>
-              This is an instagram grid placeholder.
-            </p>
-          </div>
-        </div>
-
-        <!-- fourth page -->
-
-        <div class="contentPage">
-          <h2>What to Wear?</h2>
-          <div id="swackett" class="gridBlock" style="background:yellow">
-            <p>
-              This is a swackett grid placeholder.
-            </p>
-          </div>
-        </div>
-    <!-- back cover  -->
-
-      <div class="coverPage">
-        <footer>(C) Psicólab 2016</footer>
+      <div id="set3">
+      <div class="coverPage" id="pg6" style="color:white;">
+        <p style="font-size:2em; margin-top:2em; font-family:'Courier New';">
+          “The world is a book, and those who do not travel read only one page.”
+        </p>
+        <p style="font-size:.78em; font-family:'Courier New'">
+          – Augustine of Hipppo
+        </p>
+        <footer>(C) David Gutiérrez, 2016 </footer>
+      </div>
+      <div class="contentPage"><p style="font-family:'Comic Sans MS', cursive, sans-serif; color:rgba(125,125,125,0.78); font-size:70%; position:relative;top:41%;">THANKS FOR PLAYING,</p><img src="./design/internetFriends.gif" alt="" style="width:65%; border-radius:5px; box-shadow:4px 2px rgba(191,191,191,0.5); margin-top:10em;"/>
+      </div>
       </div>
     </div>
 
     <script type="text/javascript">
-      // buttons = document.querySelectorAll(".button")
+    var buttonLeft = document.querySelector("#leftArrow");
+    var buttonRight = document.querySelector("#rightArrow");
+    var container = document.querySelector("#container")
+
+    buttonRight.addEventListener("click",nextPage);
+    buttonLeft.addEventListener("click",lastPage);
+
+
+    var select = document.querySelector("#dropDown");
+
+
+    select.addEventListener("change",chooseCity);
+
+    function chooseCity(){
+      var option = select.selectedIndex;
+      console.log(select);
+      console.log(option)
+      var longName = select[option].textContent;
+      var urlName = select[option].value;
+      var shortName=select[option].id;
+      var stateName =select[option].class;
+      var newParagraph = document.createElement("p")
+      document.querySelector("#pg2").appendChild(newParagraph)
+      newParagraph.classList.add("coverContent")
+      newParagraph.textContent = longName+" huh? Nice choice. Let's see what's going on there..."
+
+
+
+      var remoteUrlWithOrigin = "https://en.wikipedia.org/w/api.php?action=opensearch&search="+urlName+"&limit=1&format=json"
+
+            // Using jQuery
+            jQuery.ajax( {
+                url: remoteUrlWithOrigin,
+                dataType: 'jsonp',
+                type: 'GET',
+                headers: { 'Api-User-Agent': '"dave.gutierrez0@gmail.com"' },
+                success: function(wiResults){
+                  // console.log(wiResults[2][0]);
+                  document.querySelector("#wiki").textContent = wiResults[2][0];
+                 }
+            } );
+
+
+            if (shortName=="San_Francisco"){
+
+            $.get("http://api.wunderground.com/api/70b484d06dad279f/geolookup/conditions/q/CA/"+shortName+".json", function(wResults){
+              document.querySelector("#cityName").textContent = longName;
+              document.querySelector("#localTime").textContent = wResults.current_observation.local_time_rfc822.substring(17,25);
+              document.querySelector("#currentTemp").textContent = wResults.current_observation.temperature_string;
+              document.querySelector("#weatherCo").textContent = wResults.current_observation.weather.toLowerCase();
+            })} else if (shortName=="New_York"){
+              $.get("http://api.wunderground.com/api/70b484d06dad279f/geolookup/conditions/q/NY/New_York.json", function(wResults){
+                document.querySelector("#cityName").textContent = longName;
+                document.querySelector("#localTime").textContent = wResults.current_observation.local_time_rfc822.substring(17,25);
+                document.querySelector("#currentTemp").textContent = wResults.current_observation.temperature_string;
+                document.querySelector("#weatherCo").textContent = wResults.current_observation.weather.toLowerCase();
+              })} else if (shortName=="Chicago") {
+                $.get("http://api.wunderground.com/api/70b484d06dad279f/geolookup/conditions/q/IL/Chicago.json", function(wResults){
+                  document.querySelector("#cityName").textContent = longName;
+                  document.querySelector("#localTime").textContent = wResults.current_observation.local_time_rfc822.substring(17,25);
+                  document.querySelector("#currentTemp").textContent = wResults.current_observation.temperature_string;
+                  document.querySelector("#weatherCo").textContent = wResults.current_observation.weather.toLowerCase();
+              })} else if (shortName=="Boston"){
+              $.get("http://api.wunderground.com/api/70b484d06dad279f/geolookup/conditions/q/MA/Boston.json", function(wResults){
+                document.querySelector("#cityName").textContent = longName;
+                document.querySelector("#localTime").textContent = wResults.current_observation.local_time_rfc822.substring(17,25);
+                document.querySelector("#currentTemp").textContent = wResults.current_observation.temperature_string;
+                document.querySelector("#weatherCo").textContent = wResults.current_observation.weather.toLowerCase();
+            }) }
+
+
+            $.get("http://ws.audioscrobbler.com/2.0/?method=geo.gettoptracks&country=united%20states&location="+urlName+"&api_key=7510679a7be39e441d0fd3d2420b6ef0&format=json",function(fmResults){
+              document.querySelector("#fm1").textContent = fmResults.tracks.track[0].name + " by " + fmResults.tracks.track[0].artist.name;
+              document.querySelector("#fm2").textContent = fmResults.tracks.track[1].name + " by " + fmResults.tracks.track[1].artist.name;
+              document.querySelector("#fm3").textContent = fmResults.tracks.track[2].name + " by " + fmResults.tracks.track[2].artist.name;
+              document.querySelector("#fm4").textContent = fmResults.tracks.track[3].name + " by " + fmResults.tracks.track[3].artist.name;
+              document.querySelector("#fm5").textContent = fmResults.tracks.track[4].name + " by " + fmResults.tracks.track[4].artist.name;
+              document.querySelector("#fm1i").href = fmResults.tracks.track[0].url;
+              document.querySelector("#fm2i").href = fmResults.tracks.track[1].url;
+              document.querySelector("#fm3i").href = fmResults.tracks.track[2].url;
+              document.querySelector("#fm4i").href = fmResults.tracks.track[3].url;
+              document.querySelector("#fm5i").href = fmResults.tracks.track[4].url;
+            })
+          }
+
+
+
+
+      function nextPage(){
+        if(set0.style.display=='block'){
+          set0.style.display='none';
+          container.style.background='url(./design/set1.png)';
+          set1.style.display='block';
+        } else if(set1.style.display=='block'){
+          set1.style.display='none';
+          container.style.background='url(./design/set2.png)';
+          set2.style.display='block';
+        } else if(set2.style.display=='block'){
+          set2.style.display='none';
+          container.style.background='url(./design/set3.png)';
+          set3.style.display='block';
+        }
+        container.style.backgroundSize ='contain';
+        container.backgroundPosition='2em 1.5em, center';
+        container.backgroundRepeat = 'no-repeat';
+      }
+
+    function lastPage(){
+        if(set3.style.display=='block'){
+          set3.style.display='none';
+          container.style.background='url(./design/set2.png)';
+          set2.style.display='block';
+        } else if(set2.style.display=='block'){
+          set2.style.display='none';
+          container.style.background='url(./design/set1.png)';
+          set1.style.display='block';
+        } else if (set1.style.display=='block'){
+          set1.style.display='none';
+          container.style.background='url(./design/set0.png)';
+          set0.style.display='block';
+        }
+        container.style.backgroundSize ='contain';
+        container.backgroundPosition='2em 1.5em, center';
+        container.backgroundRepeat = 'no-repeat';
+      }
+
+
+
+      var set0  = document.querySelector("#set0")
+      var set1  = document.querySelector("#set1")
+      var set2  = document.querySelector("#set2")
+      var set3  = document.querySelector("#set3")
+      var set = [set0, set1, set2, set3]
+
+
+
+
+      // $.get("http://api.brewerydb.com/v2/search/geo/point?lat=37.77999&lng=-122.41999&key=eb6952dc965e0ccadc84bf49c2f61728",function(bResults){
+      //   console.log(bResults);
+      // })
+
+
+
     </script>
   </body>
 </html>
