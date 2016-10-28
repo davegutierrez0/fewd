@@ -100,7 +100,9 @@
         font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
         font-weight:bold;
         text-decoration:underline;
+
       }
+      
       img{
         margin-top:1em;
       }
@@ -140,15 +142,17 @@
         font-size:1em;
       }
 
-
+      a{
+        text-decoration:none;
       }
+
 
             .select-style {
           border: 1px solid #ccc;
           width: 120px;
           border-radius: 3px;
           overflow: hidden;
-          background: #fafafa url("img/icon-select.png") no-repeat 90% 50%;
+          /*background: #fafafa url("img/icon-select.png") no-repeat 90% 50%;*/
       }
 
       .select-style select {
@@ -156,11 +160,11 @@
           width: 60%;
           border: none;
           box-shadow: none;
-          background: white;
+          /*background: white;*/
           background-image: none;
           -webkit-appearance: none;
           display:block;
-          margin: 0 auto;
+          margin: 2em auto;
       }
 
       .select-style select:focus {
@@ -188,11 +192,11 @@
         <div class="coverPage" id="pg1"></div>
         <div class="contentPage" id="pg2">
           <hr>
-          <h1 class="title" >Welcome to HipsterTravel!</h1>
+          <h1 class="title" >Welcome to HipTravel!</h1>
           <p class="coverContent">Ironic travel advice since <span style="text-decoration:line-through">1816</span> 2016</p>
           <img src="./design/worldMap.png" alt="" style="max-width:300px"/>
           <div class="select-style">
-            <label class="coverContent">Where do you want to go?</label>
+            <label class="coverContent">Where would you like to go?</label>
           <select id="dropDown" class="dropdown-content">
             <option id="blank" value=""></option>
             <option class="MA" id="Boston" value="Boston">Boston, MA</option>
